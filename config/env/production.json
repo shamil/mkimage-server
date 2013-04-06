@@ -1,3 +1,7 @@
 {
-
+    "imageable":
+    {
+        // allow only boxee.tv domains
+        "whitelist": { "allowedHosts": [".*\\.?boxee\\.tv"] }
+    }
 }

@@ -1,10 +1,14 @@
 {
     // log to stdout in dev env
     "access_log": "",
+    "access_log_format": "dev",
 
     "imageable":
     {
         // allow all in dev env
-        "whitelist": { "allowedHosts": [".*"] }
+        "whitelist": { "allowedHosts": [".*"] },
+
+        // enable verbose logging
+        "debug": true
     }
 }

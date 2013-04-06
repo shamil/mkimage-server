@@ -15,9 +15,9 @@
      */
     "imageable":
     {
-        "whitelist": {
-            "allowedHosts": [".*\\.?boxee\\.tv"]
-        },
+
+        // We don't allow any host by default (override per env)
+        "whitelist": { "allowedHosts": ["^$"] },
 
         // Don't delete downloaded files,
         // but use them when the same url is requested twice.
