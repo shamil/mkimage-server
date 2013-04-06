@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Persus's Shield</title>
+    <title>mkimage-server (aka Persus's Shield)</title>
     <style type="text/css">
       body { background-color: #cdcccc; color: #000; font-family: serif; }
       a:visited{color: blue}
@@ -22,7 +22,7 @@
             This Server is running
           </strong>
           <h1>
-            Persus's Shield
+            mkimage-server (aka Persus's Shield)
           </h1>
           <h2>
             A shiny recepie to serve resized images on-the-fly
@@ -42,16 +42,13 @@
             URL is checked against a regex to avoid public use.
             </li>
             <li>
-            Image is resized using the fastimage_resize gem.
+            Image is resized using the node-imageable module.
             </li>
             <li>
-            Resized image is stored on Amazon's S3 for good (configurable).
+            Resized image is cached in local directory (configurable).
             </li>
             <li>
-            Served using a redirect to a CloudFront URL.
-            </li>
-            <li>
-            Redis is used for caching keys of created images.
+            API from <a href="https://github.com/lieldulev/perseus-shield">old</a> version still supported.
             </li>
           </ul>
         </td>
