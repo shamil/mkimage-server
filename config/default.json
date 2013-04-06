@@ -5,7 +5,7 @@
     "listen": 8000,
 
     /**
-     * Access logs file path, comment out to ouput to stdout
+     * Access logs file path, comment out to output to stdout
      */
     "access_log": "/mnt/logs/mkimage-access.log",
 
