@@ -1,0 +1,29 @@
+{
+    /**
+     * Which port the mkimage-server should listen to?
+     */
+    "listen": 8000,
+
+    /**
+     * Access logs file path, comment out to ouput to stdout
+     */
+    "access_log": "/mnt/logs/mkimage-access.log",
+
+    /**
+     * All 'imageable' options goes here
+     * README: https://github.com/sdepold/node-imageable/blob/master/README.md
+     */
+    "imageable":
+    {
+        "whitelist": {
+            "allowedHosts": [".*\\.?boxee\\.tv"]
+        },
+
+        // Don't delete downloaded files,
+        // but use them when the same url is requested twice.
+        "keepDownloads": true,
+
+        // The folder you want to store the downloaded files in.
+        "tmpPathRoot": "/var/cache/mkimage-server"
+    }
+}

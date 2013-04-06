@@ -1,0 +1,14 @@
+{
+    "name": "mkimage-server",
+    "version": "0.0.1",
+    "description": "Image resizing server, built on top of 'imageable' module",
+    "keywords": ["image", "resize", "server"],
+    "author": "shamil@boxee.tv",
+
+    "dependencies": {
+        "express": ">= 3.1.1",
+        "imageable": "git://github.com/shamil/node-imageable.git#master"
+    },
+
+    "engines": { "node": ">= 0.8.0" }
+}

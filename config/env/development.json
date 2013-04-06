@@ -1,0 +1,10 @@
+{
+    // log to stdout in dev env
+    "access_log": "",
+
+    "imageable":
+    {
+        // allow all in dev env
+        "whitelist": { "allowedHosts": [".*"] }
+    }
+}
