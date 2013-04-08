@@ -24,6 +24,6 @@
         "keepDownloads": true,
 
         // The folder you want to store the downloaded files in.
-        "tmpPathRoot": "/var/cache/mkimage-server"
+        "tmpPathRoot": "/mnt/cache/mkimage-server"
     }
 }
