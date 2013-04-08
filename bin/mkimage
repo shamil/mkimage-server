@@ -7,7 +7,7 @@
  */
 
 var cluster = require('cluster'),
-    num_workers = require('os').cpus().length;
+    num_workers = process.env.MKIMAGE_MAX_WORKERS || require('os').cpus().length;
     respawn_workers = true;
 
 // give a name to the process
