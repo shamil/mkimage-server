@@ -1,7 +1,4 @@
 {
-    "imageable":
-    {
-        // allow only boxee.tv domains
-        "whitelist": { "allowedHosts": [".*\\.?boxee\\.tv"] }
-    }
+    "allowed_hosts": ["*boxee.tv"],
+    "verbose": true // TODO: remove this in prod
 }

@@ -1,14 +1,8 @@
 {
-    // log to stdout in dev env
-    "access_log": "",
+    "listen": 8080,
+    "access_log": "", // log to stdout
     "access_log_format": "dev",
-
-    "imageable":
-    {
-        // allow all in dev env
-        "whitelist": { "allowedHosts": [".*"] },
-
-        // enable verbose logging
-        "debug": true
-    }
+    "cache_dir": "/tmp/mkimage-dev",
+    "allowed_hosts": ["*"],
+    "verbose": true
 }

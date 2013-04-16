@@ -5,25 +5,42 @@
     "listen": 8000,
 
     /**
+     * url namespace prefix (empty bu default)
+     */
+    //"namespace": "mkimage",
+
+    /**
      * Access logs file path, comment out to output to stdout
      */
     "access_log": "/mnt/logs/mkimage-access.log",
 
     /**
-     * All 'imageable' options goes here
-     * README: https://github.com/sdepold/node-imageable/blob/master/README.md
+     * Access log format
+     * more info here: http://www.senchalabs.org/connect/logger.html
      */
-    "imageable":
-    {
+    "access_log_format": "default",
 
-        // We don't allow any host by default (override per env)
-        "whitelist": { "allowedHosts": ["^$"] },
+    /**
+     * File cache directory, holds all downloaded/resized files
+     * must be accessible by the user that runs the mkimage-server
+     */
+    "cache_dir": "/mnt/cache/mkimage-server",
 
-        // Don't delete downloaded files,
-        // but use them when the same url is requested twice.
-        "keepDownloads": true,
+    /**
+     * Maximum age of cached object in seconds
+     * default is 28 days (2419200 seconds)
+     */
+    //"cache_max_age": 2419200,
 
-        // The folder you want to store the downloaded files in.
-        "tmpPathRoot": "/mnt/cache/mkimage-server"
-    }
+    /**
+     * Array of allowed hosts for image urls (glob matching)
+     * default all blocked
+     */
+    //"allowed_hosts": [""],
+
+    /**
+     * Enable verbose output
+     * default is false
+     */
+    "verbose": false
 }

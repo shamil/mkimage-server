@@ -1,14 +1,18 @@
 {
     "name": "mkimage-server",
-    "version": "0.1.0",
-    "description": "Image resizing server, built on top of 'imageable' module",
+    "version": "0.2.0",
+    "description": "Image resizing server, using imagemagick cli tools",
     "keywords": ["image", "resize", "server"],
     "author": "Alex Simenduev <shamil@boxee.tv> (http://boxee.tv)",
     "contributors": [ "Liel Dulev <liel@boxee.tv> (http://boxee.tv)" ],
 
     "dependencies": {
+        "sslog": ">= 0.1.0",
         "express": ">= 3.1.1",
-        "imageable": "git://github.com/shamil/node-imageable.git#master"
+        "mkdirp": ">= 0.3.5",
+        "request": ">= 2.16.6",
+        "minimatch": ">= 0.2.11",
+        "lru-cache": ">= 2.3.0"
     },
 
     "bin" : { "mkimage" : "./bin/mkimage" },
