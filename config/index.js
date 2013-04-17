@@ -15,7 +15,7 @@ config.load('./config/default.json', function(err) {
     // load environment specific config options
     config.load('./config/env/' + env + '.json', function(err) {
         if (err) {
-            log.warning('Config: env "' + env + '", ' + err.message);
+            log.warn('Config: env "' + env + '", ' + err.message);
             return;
         }
 
