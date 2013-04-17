@@ -1,4 +1,3 @@
 {
     "allowed_hosts": ["*boxee.tv"],
-    "verbose": true // TODO: remove this in prod
 }
