@@ -35,9 +35,8 @@ On-demand image resize server based on 'express'
 
 > the `url` parameter must be encoded, otherwise unexpected behaviour may occur.
 
-so: `http://www.google.com/images/icons/product/apps-128.png`
-
-becomes: `http%3A%2F%2Fwww.google.com%2Fimages%2Ficons%2Fproduct%2Fapps-128.png`
+- **the url** `http://www.google.com/images/icons/product/apps-128.png`
+- **becomes** `http%3A%2F%2Fwww.google.com%2Fimages%2Ficons%2Fproduct%2Fapps-128.png`
 
 ### Examples
 
