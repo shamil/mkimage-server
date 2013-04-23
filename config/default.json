@@ -1,11 +1,12 @@
 {
     /**
      * Which port the mkimage-server should listen to?
+     * default is 8000 (to let the server run as non-root user)
      */
-    "listen": 8000,
+    "listen": 80,
 
     /**
-     * url namespace prefix (empty bu default)
+     * url namespace prefix (empty by default)
      */
     //"namespace": "mkimage",
 

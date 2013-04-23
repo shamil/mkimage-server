@@ -1,4 +1,5 @@
 {
+    "listen": 8000,
     "allowed_hosts": ["*boxee.tv"],
     "cache_max_age": 86400 // cache for 2 days, till we confident with the service
 }
