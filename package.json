@@ -1,6 +1,6 @@
 {
     "name": "mkimage-server",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "description": "Image resizing server, using imagemagick cli tools",
     "keywords": ["image", "resize", "server"],
     "author": "Alex Simenduev <shamil@boxee.tv> (http://boxee.tv)",
