@@ -1,5 +1,5 @@
 // requires
-var path        = require('fs'),
+var fs          = require('fs'),
     log         = require('sslog'),
     config      = require('../lib/config');
 
@@ -21,6 +21,23 @@ config.load('./config/default.json', function(err) {
 
         // set verbose level
         if (config.verbose) log.level = 5;
+
+        // prepare for SSL if enabled
+        config.ssl = config.ssl || {};
+        if (config.ssl.listen !== false)
+        {
+            // load SSL certificate
+            try
+            {
+                config.ssl.cert = fs.readFileSync(config.ssl.cert);
+                config.ssl.key  = fs.readFileSync(config.ssl.key);
+            }
+            catch (err)
+            {
+                log.warn('SSL won\'t be enabled. Configuration error: ' + err.message);
+                config.ssl.listen = false;
+            }
+        }
     });
 });
 

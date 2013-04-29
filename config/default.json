@@ -6,6 +6,17 @@
     "listen": 80,
 
     /**
+     * SSL related options
+     * default listen port is 8443
+     */
+    "ssl":
+    {
+        "listen": false
+        //"cert":" /* ... path to certificate ... */",
+        //"key":  /* ... path to private key ... */
+    },
+
+    /**
      * url namespace prefix (empty by default)
      */
     //"namespace": "mkimage",
