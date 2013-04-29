@@ -8,12 +8,14 @@
     /**
      * SSL related options
      * default listen port is 8443
+     * full list of options:
+     *     http://nodejs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener
      */
     "ssl":
     {
+        //"cert": "/* ... path to certificate ... */",
+        //"key":  "/* ... path to private key ... */",
         "listen": false
-        //"cert":" /* ... path to certificate ... */",
-        //"key":  /* ... path to private key ... */
     },
 
     /**

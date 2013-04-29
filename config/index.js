@@ -26,15 +26,21 @@ config.load('./config/default.json', function(err) {
         config.ssl = config.ssl || {};
         if (config.ssl.listen !== false)
         {
-            // load SSL certificate
+            // prepare and sanity for some of the SSL options
             try
             {
-                config.ssl.cert = fs.readFileSync(config.ssl.cert);
-                config.ssl.key  = fs.readFileSync(config.ssl.key);
+                if (config.ssl.ca)
+                {
+                    if (!Array.isArray(config.ssl.ca)) throw new ('config.ssl.ca: must be and Array of string(s)');
+                    config.ssl.ca = config.ssl.ca.map(function(ca) { return fs.readFileSync(ca); });
+                }
+                if (config.ssl.pfx)  config.ssl.pfx = fs.readFileSync(config.ssl.pfx);
+                if (config.ssl.key)  config.ssl.key  = fs.readFileSync(config.ssl.key);                
+                if (config.ssl.cert) config.ssl.cert = fs.readFileSync(config.ssl.cert);                
             }
             catch (err)
             {
-                log.warn('SSL won\'t be enabled. Configuration error: ' + err.message);
+                log.warn('SSL won\'t be enabled.' + err.message);
                 config.ssl.listen = false;
             }
         }
