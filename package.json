@@ -1,11 +1,11 @@
 {
     "name": "mkimage-server",
-    "version": "0.3.4",
+    "version": "0.3.6",
     "description": "Image resizing server, using imagemagick cli tools",
     "keywords": ["image", "resize", "server"],
-    "author": "Alex Simenduev <shamil@boxee.tv> (http://boxee.tv)",
+    "author": "Alex Simenduev <shamil.si@gmail.com> (https://linkedin.com/in/simenduev)",
     "contributors": [ "Liel Dulev <liel@boxee.tv> (http://boxee.tv)" ],
-    "repository": "git://github.com/Boxee/mkimage-server.git",
+    "repository": "git://github.com/shamil/mkimage-server.git",
 
     "dependencies": {
         "sslog": ">= 0.1.3",
